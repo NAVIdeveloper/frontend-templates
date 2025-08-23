@@ -1,0 +1,90 @@
+@font-face {
+    font-family: ios;
+    src: url(../fonts/sf-pro-text_regular.woff2);
+}
+
+@font-face {
+    font-family: ios-bold;
+    src: url(../fonts/sf-pro-text_bold.woff2);
+}
+
+@font-face {
+    font-family: ios-normal;
+    src: url(../fonts/sf-pro-display_medium.woff2);
+}
+:root {
+    --main-text-color:#06c;
+    --main-back-color:#f5f5f7; 
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ios;
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-back-color);
+    object-fit: cover;   
+}
+img {
+    position: fixed;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px;
+    background-image: linear-gradient(45deg, #dfdfdf67,#dfdfdf67);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+}
+
+ion-icon {
+    font-size: 1.2rem;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.btn-plain {
+    font-family: ios;
+    color: var(--main-text-color);
+}
+
+.btn-filled {
+    font-family: ios;
+    border-radius: 18px;
+    padding: 8px 10px;
+    color: white;
+    background-color: var(--main-text-color);
+}
+.btn-filled {
+    font-family: ios;
+    border-radius: 18px;
+    padding: 8px 10px;
+    color: white;
+    background-color: var(--main-text-color);
+}
+.btn-gray {
+    font-family: ios;
+    border-radius: 18px;
+    padding: 8px 10px;
+    background-color: #dfdfdf;
+    color: var(--main-text-color);
+}
+.btn-tined {
+    font-family: ios;
+    border-radius: 18px;
+    padding: 8px 10px;
+    background-color: #d0ebff;
+    color: var(--main-text-color);
+}

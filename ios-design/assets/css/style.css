@@ -1,0 +1,52 @@
+@font-face {
+    font-family: ios;
+    src: url("../fonts/sf-pro-display_medium.woff2");
+}
+
+@font-face {
+    font-family: ios-bold;
+    src: url("../fonts/sf-pro-text_bold.woff2");
+}
+
+body {
+    font-family: ios;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255,255,255,0.87);
+    font-size: larger;
+    height: 200vh;
+    padding: 8px;
+    /* background-image: linear-gradient(90deg,rgb(214, 84, 32), rgb(194, 62, 91)); */
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #1d1d1f87; */
+    background-image: linear-gradient(90deg,rgba(214, 84, 32,0.67), rgba(194, 62, 91,0.67));
+    padding: 20px;
+    width: 87.5%;
+    border-radius: 9px;
+    backdrop-filter: blur(13px);
+    position: sticky;
+    top:0;
+}
+
+.container p {
+    font-size: larger;
+    font-family: ios-bold;
+}
+
+.container span {}
