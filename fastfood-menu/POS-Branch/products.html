@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Chopar Pizza - Admin Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/admin-dashboard/admin.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/admin-dashboard/products.css">
+    <link rel="stylesheet" href="../assets/css/POS/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="app-container">
         <div class="blur-background"></div>
-
         <div class="ios-app-wrapper">
             <!-- Admin Header -->
             <header class="ios-app-header">
                 <div class="header-content">
                     <div class="brand-info">
-                        <img src="./assets/images/chopar-logo.png" draggable="false" alt="Chopar Pizza"
-                            class="brand-logo">
-                        <h1 class="brand-name">Admin Dashboard</h1>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGcPqHMcNLmnj7fnztINLAhs1zk2lHqaUx2A&s" draggable="false" alt="Chopar Pizza" class="brand-logo">
+                        <div class="branch-info">
+                            <h1 class="brand-name">LesAiles</h1>
+                            <span>Toshkent, Qoratosh ko'chasi, 5A</span>
+                        </div>
                     </div>
                     <div class="admin-controls">
+                        <button class="ios-button" id="theme-toggle">
+                            <ion-icon name="contrast-outline"></ion-icon>
+                        </button>
                         <button class="ios-button" id="logout-btn">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </button>
@@ -35,26 +37,30 @@
 
             <!-- Admin Navigation -->
             <nav class="admin-nav">
-                <button class="admin-nav-btn" data-section="dashboard">
+                <a href="dashboard.html" class="admin-nav-btn" data-section="dashboard">
                     <ion-icon name="grid-outline"></ion-icon>
                     <span>Dashboard</span>
-                </button>
-                <button class="admin-nav-btn active" data-section="products">
+                </a>
+                <a href="products.html" class="admin-nav-btn active" data-section="products">
                     <ion-icon name="fast-food-outline"></ion-icon>
                     <span>Products</span>
-                </button>
-                <button class="admin-nav-btn" data-section="orders">
+                </a>
+                <a href="categories.html" class="admin-nav-btn" data-section="categories">
+                    <ion-icon name="layers-outline"></ion-icon>
+                    <span>Categories</span>
+                </a>
+                <a class="admin-nav-btn" data-section="orders">
                     <ion-icon name="receipt-outline"></ion-icon>
                     <span>Orders</span>
-                </button>
-                <button class="admin-nav-btn" data-section="analytics">
+                </a>
+                <a class="admin-nav-btn" data-section="analytics">
                     <ion-icon name="stats-chart-outline"></ion-icon>
                     <span>Analytics</span>
-                </button>
-                <button class="admin-nav-btn" data-section="settings">
+                </a>
+                <a class="admin-nav-btn" data-section="settings">
                     <ion-icon name="settings-outline"></ion-icon>
                     <span>Settings</span>
-                </button>
+                </a>
             </nav>
 
             <!-- Main Content Area -->
@@ -110,13 +116,12 @@
                                     <!-- Product rows will be inserted here by JavaScript -->
                                     <tr>
                                         <td>
-                                            <img src="./assets/images/burger.avif" class="table-product-img">
+                                            <img src="../assets/images/burger.avif" class="table-product-img">
                                         </td>
                                         <td>
                                             <div class="product-info">
                                                 <h4>GamBurger</h4>
-                                                <p class="product-description">Juicy beef patty with cheese and
-                                                    vegetables</p>
+                                                <p class="product-description">Juicy beef patty with cheese and vegetables</p>
                                             </div>
                                         </td>
                                         <td>Burgerlar</td>
@@ -144,7 +149,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="./assets/images/bigburger.avif" class="table-product-img">
+                                            <img src="../assets/images/bigburger.avif" class="table-product-img">
                                         </td>
                                         <td>
                                             <div class="product-info">
@@ -177,7 +182,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="./assets/images/pizza.jpg" class="table-product-img">
+                                            <img src="../assets/images/pizza.jpg" class="table-product-img">
                                         </td>
                                         <td>
                                             <div class="product-info">
@@ -299,9 +304,10 @@
             </div>
         </div>
     </div>
-    <script src="./assets/js/admin-dashboard/products.js"></script>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../assets/js/POS/products.js"></script>
+    <script src="../assets/js/POS/dashboard.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Chopar Pizza - Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/POS/admin.css">
+    <link rel="stylesheet" href="../assets/css/POS/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="blur-background"></div>
+
+        <div class="ios-app-wrapper">
+            <!-- Admin Header -->
+            <header class="ios-app-header">
+                <div class="header-content">
+                    <div class="brand-info">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGcPqHMcNLmnj7fnztINLAhs1zk2lHqaUx2A&s" draggable="false" alt="Chopar Pizza" class="brand-logo">
+                        <div class="branch-info">
+                            <h1 class="brand-name">LesAiles</h1>
+                            <span>Toshkent, Qoratosh ko'chasi, 5A</span>
+                        </div>
+                    </div>
+                    <div class="admin-controls">
+                        <button class="ios-button" id="theme-toggle">
+                            <ion-icon name="contrast-outline"></ion-icon>
+                        </button>
+                        <button class="ios-button" id="logout-btn">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Admin Navigation -->
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="admin-nav-btn active" data-section="dashboard">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    <span>Dashboard</span>
+                </a>
+                <a href="products.html" class="admin-nav-btn" data-section="products">
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                    <span>Products</span>
+                </a>
+                <a href="categories.html" class="admin-nav-btn" data-section="categories">
+                    <ion-icon name="layers-outline"></ion-icon>
+                    <span>Categories</span>
+                </a>
+                <a class="admin-nav-btn" data-section="orders">
+                    <ion-icon name="receipt-outline"></ion-icon>
+                    <span>Orders</span>
+                </a>
+                <a class="admin-nav-btn" data-section="analytics">
+                    <ion-icon name="stats-chart-outline"></ion-icon>
+                    <span>Analytics</span>
+                </a>
+                <a class="admin-nav-btn" data-section="settings">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="admin-main">
+                <!-- Dashboard Section -->
+                <section class="admin-section active" id="dashboard-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Dashboard Overview</h2>
+                        <div class="date-filter">
+                            <div class="select-wrapper">
+                              <select class="ios-select" id="time-period">
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month" selected>This Month</option>
+                                <option value="quarter">This Quarter</option>
+                                <option value="year">This Year</option>
+                              </select>
+                              <ion-icon name="chevron-down-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon revenue">
+                                <ion-icon name="cash-outline"></ion-icon>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Revenue</h3>
+                                <div class="stat-value">12,450,000 so'm</div>
+                                <div class="stat-change positive">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    <span>12.5% from last month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon orders">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Orders</h3>
+                                <div class="stat-value">342</div>
+                                <div class="stat-change positive">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    <span>8.3% from last month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon customers">
+                                <ion-icon name="people-outline"></ion-icon>
+                            </div>
+                            <div class="stat-info">
+                                <h3>New Customers</h3>
+                                <div class="stat-value">78</div>
+                                <div class="stat-change positive">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    <span>5.2% from last month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon avg-order">
+                                <ion-icon name="pricetag-outline"></ion-icon>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Avg. Order Value</h3>
+                                <div class="stat-value">36,400 so'm</div>
+                                <div class="stat-change positive">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    <span>3.7% from last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Products -->
+                    <div class="top-products-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Top Selling Products</h2>
+                            <button class="ios-button" id="view-all-products">
+                                <span>View All</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/burger.avif" alt="GamBurger">
+                                    <div class="product-rank">1</div>
+                                </div>
+                                <div class="product-details">
+                                    <h4>GamBurger</h4>
+                                    <p class="product-category">Burgerlar</p>
+                                    <div class="product-stats">
+                                        <div class="stat">
+                                            <span class="value">142</span>
+                                            <span class="label">Sold</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="value">3,976,000</span>
+                                            <span class="label">Revenue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/pizza.jpg" alt="Milliy Pizza">
+                                    <div class="product-rank">2</div>
+                                </div>
+                                <div class="product-details">
+                                    <h4>Milliy Pizza</h4>
+                                    <p class="product-category">Pizza</p>
+                                    <div class="product-stats">
+                                        <div class="stat">
+                                            <span class="value">98</span>
+                                            <span class="label">Sold</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="value">3,920,000</span>
+                                            <span class="label">Revenue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/bigburger.avif" alt="Big Burger">
+                                    <div class="product-rank">3</div>
+                                </div>
+                                <div class="product-details">
+                                    <h4>Big Burger</h4>
+                                    <p class="product-category">Burgerlar</p>
+                                    <div class="product-stats">
+                                        <div class="stat">
+                                            <span class="value">87</span>
+                                            <span class="label">Sold</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="value">2,784,000</span>
+                                            <span class="label">Revenue</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/POS/dashboard.js"></script>
+</body>
+
+</html>
