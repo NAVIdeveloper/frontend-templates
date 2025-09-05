@@ -53,6 +53,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-wrap-mode: nowrap;
 }
 
 .brand-logo {
@@ -765,8 +766,24 @@ select:focus {
 
     .admin-nav {
         justify-content: start;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        overflow-x: auto;               /* enable horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+        scroll-snap-type: x mandatory;  /* enable snap on x-axis */
+    }
+    .admin-nav-btn {
+        scroll-snap-align: start; 
+    }
+        .brand-info {
+        font-size:small;
     }
 }
 a {
     text-decoration: none;
+}
+.admin-controls {
+    display: flex;
+    gap: 6px;
 }
