@@ -17,6 +17,7 @@ body {
     background-color: var(--ios-system-body-background);
     color: var(--ios-label-primary);
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* App Container */
@@ -39,7 +40,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: color-mix(in srgb, var(--ios-system-background) 95%, transparent);
+    background-color: var(--ios-system-background);
     backdrop-filter:saturate(180%);
 }
 
@@ -81,10 +82,9 @@ body {
     font-weight: 500;
     color: var(--ios-label-primary);
     gap: 8px;
-    transition: background-color 0.2s ease;
+    /* transition: background-color 0.2s ease; */
     cursor: pointer;
 }
-
 .ios-button.primary {
     background-color: var(--ios-system-primary);
     color: white;
@@ -153,6 +153,7 @@ body {
 /* Main Content */
 .admin-main {
     padding: 16px;
+    padding-bottom: 4rem;
 }
 
 .admin-section {
@@ -181,7 +182,7 @@ body {
 .product-management {
     background-color: var(--ios-card-background);
     border-radius: 12px;
-    padding: 20px;
+    padding: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -262,7 +263,7 @@ select:focus {
 /* iOS Table Styles */
 .ios-table-container {
     overflow-x: auto;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 16px;
 }
@@ -270,14 +271,14 @@ select:focus {
 .ios-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--ios-card-background);
+    background-color: var(--ios-system-background);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .ios-table th {
     background-color: var(--ios-system-primary);
-    color: white;
+    color: #f1f1f1;
     font-weight: 500;
     padding: 12px 16px;
     text-align: left;
@@ -594,7 +595,6 @@ select:focus {
     min-height: 100px;
     resize: vertical;
 }
-
 .input-group {
     position: relative;
 }
@@ -615,7 +615,7 @@ select:focus {
 /* Custom Select */
 .custom-select {
     position: relative;
-    border-radius: 10px;
+    border-radius: 2px;
     background-color: var(--ios-system-gray6);
     overflow: hidden;
     height: 44px;
@@ -765,13 +765,18 @@ select:focus {
     }
 
     .admin-nav {
-        justify-content: start;
-        position: sticky;
-        top: 0;
+        justify-content: space-evenly;
+        position: fixed;
+        bottom: 0;
+        border-bottom: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
         z-index: 10;
         overflow-x: auto;               /* enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
         scroll-snap-type: x mandatory;  /* enable snap on x-axis */
+        width: 100%;
+        background-color: color-mix(in srgb, var(--ios-system-gray6) 95%, transparent);
+        backdrop-filter: blur(10px);
     }
     .admin-nav-btn {
         scroll-snap-align: start; 
